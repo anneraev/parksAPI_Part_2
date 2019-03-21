@@ -1,1 +1,1 @@
-listNationalParks()
+listParks("parks");

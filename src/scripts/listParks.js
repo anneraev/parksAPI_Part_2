@@ -1,15 +1,18 @@
-const listNationalParks = () => {
-  getAllItems("parks").then(parksArray => {
+const listParks = (directoryName) => {
+  getAllItems(directoryName).then(parksArray => {
     console.log("parksArray", parksArray)
-    let nationParksFragment = document.createDocumentFragment();
+    let parksFragment = document.createDocumentFragment();
 
     parksArray.forEach(park => {
       let parkHtml = buildParkHtml(park);
-      nationParksFragment.appendChild(parkHtml);
+      parksFragment.appendChild(parkHtml);
     });
 
+    //for national parks.
     const nationalParksSection = document.querySelector("#national--parks");
     clearElement(nationalParksSection)
-    nationalParksSection.appendChild(nationParksFragment)
+    nationalParksSection.appendChild(parksFragment)
+
+    //for monuments
   });
 };

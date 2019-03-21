@@ -1,4 +1,5 @@
 const buildParkHtml = parkObject => {
+  // My usual method.
   // <article>
   //  <h3>Park Name</h3>
   //  <p>State the park in located in</p>
