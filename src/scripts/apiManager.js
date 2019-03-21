@@ -1,7 +1,9 @@
 const apiBaseUrl = "http://localhost:8088"
 
-const getAllParks = () => fetch(`${apiBaseUrl}/parks`).then(response => response.json())
+//gets all items in the specified api directory. The passed argument is the name of the directory.
+const getAllItems = (directoryName) => fetch(`${apiBaseUrl}/${directoryName}`).then(response => response.json())
 
-const deletePark = (parkId) => fetch(`${apiBaseUrl}/parks/${parkId}`, {
-  method: "DELETE"
+//delete's specified item from specified api directory. The first argument passed is the name of the directory, the second is the ID of the item to delete.
+const deleteItem = (directoryName, parkId) => fetch(`${apiBaseUrl}/${directoryName}/${parkId}`, {
+    method: "DELETE"
 })

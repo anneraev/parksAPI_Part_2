@@ -1,5 +1,5 @@
 const listNationalParks = () => {
-  getAllParks().then(parksArray => {
+  getAllItems("parks").then(parksArray => {
     console.log("parksArray", parksArray)
     let nationParksFragment = document.createDocumentFragment();
 
