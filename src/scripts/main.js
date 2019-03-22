@@ -1,1 +1,3 @@
 listParks("parks");
+
+listParks("monuments");
