@@ -5,7 +5,7 @@ const listParks = (directoryName) => {
     //reference to a created fragment to which new HTML elements will be written.
     let parksFragment = document.createDocumentFragment();
 
-    //This iterates through the array of parks and for each one passes that park object to a function that builds the HTML, stores it in a variable that can then be passed to the appendChild function to append the HTML to the parks fragment.
+    //Iterates through the array of parks and for each one passes that park object to a function that builds the HTML, stores it in a variable that can then be passed to the appendChild function to append the HTML to the parks fragment.
     parksArray.forEach(park => {
       let parkHtml = buildParkHtml(park, directoryName, park.id);
       parksFragment.appendChild(parkHtml);

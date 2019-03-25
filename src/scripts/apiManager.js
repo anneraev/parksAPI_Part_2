@@ -7,3 +7,25 @@ const getAllItems = (directoryName) => fetch(`${apiBaseUrl}/${directoryName}`).t
 const deleteItem = (directoryName, itemId) => fetch(`${apiBaseUrl}/${directoryName}/${itemId}`, {
   method: "DELETE"
 })
+
+//gets individual item from directory.
+const getPark = (parkId, directoryName) => fetch(`${apiBaseUrl}/${directoryName}/${parkId}`).then(response => response.json())
+
+
+//patches objects in API without deleting the entire entry.
+const patchPark = (parkId, updatedParkObject, directoryName) => fetch(`${apiBaseUrl}/${directoryName}/${parkId}`, {
+  method: "PATCH",
+  headers: {
+    "content-type": "application/json"
+  },
+  body: JSON.stringify(updatedParkObject)
+})
+
+//Put will replace the entire entry.
+const putPark = (parkId, updatedParkObject, directoryName) => fetch(`${apiBaseUrl}/${directoryName}/${parkId}`, {
+  method: "PUT",
+  headers: {
+    "content-type": "application/json"
+  },
+  body: JSON.stringify(updatedParkObject)
+})
