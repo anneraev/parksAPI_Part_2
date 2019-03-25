@@ -1,1 +1,3 @@
-listNationalParks()
+listParks("parks");
+
+listParks("monuments");
